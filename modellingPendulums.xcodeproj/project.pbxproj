@@ -1,0 +1,323 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		60E4C63927ADB43A0072705F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4C63827ADB43A0072705F /* main.swift */; };
+		60E4C64127ADB4C10072705F /* DoubleVector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4C63F27ADB4C10072705F /* DoubleVector.swift */; };
+		60E4C64227ADB4C10072705F /* RungeKutta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4C64027ADB4C10072705F /* RungeKutta.swift */; };
+		60E4C64427ADB4F70072705F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4C64327ADB4F70072705F /* Protocols.swift */; };
+		60E4C64627ADB5380072705F /* Extensions to Basic Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4C64527ADB5380072705F /* Extensions to Basic Types.swift */; };
+		60E4C64927ADB74F0072705F /* springPendulum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4C64827ADB74F0072705F /* springPendulum.swift */; };
+		60E4C64B27AECDF20072705F /* SimulationDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4C64A27AECDF20072705F /* SimulationDataContainer.swift */; };
+		60E4C64D27AEECAC0072705F /* DoublePendulum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4C64C27AEECAC0072705F /* DoublePendulum.swift */; };
+		60E4C64F27B012150072705F /* DuffingOscillator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E4C64E27B012150072705F /* DuffingOscillator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		60E4C63327ADB43A0072705F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		60E4C63527ADB43A0072705F /* modellingPendulums */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = modellingPendulums; sourceTree = BUILT_PRODUCTS_DIR; };
+		60E4C63827ADB43A0072705F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		60E4C63F27ADB4C10072705F /* DoubleVector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleVector.swift; sourceTree = "<group>"; };
+		60E4C64027ADB4C10072705F /* RungeKutta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RungeKutta.swift; sourceTree = "<group>"; };
+		60E4C64327ADB4F70072705F /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		60E4C64527ADB5380072705F /* Extensions to Basic Types.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extensions to Basic Types.swift"; sourceTree = "<group>"; };
+		60E4C64827ADB74F0072705F /* springPendulum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = springPendulum.swift; sourceTree = "<group>"; };
+		60E4C64A27AECDF20072705F /* SimulationDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimulationDataContainer.swift; sourceTree = "<group>"; };
+		60E4C64C27AEECAC0072705F /* DoublePendulum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoublePendulum.swift; sourceTree = "<group>"; };
+		60E4C64E27B012150072705F /* DuffingOscillator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuffingOscillator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		60E4C63227ADB43A0072705F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60E4C62C27ADB43A0072705F = {
+			isa = PBXGroup;
+			children = (
+				60E4C63727ADB43A0072705F /* modellingPendulums */,
+				60E4C63627ADB43A0072705F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		60E4C63627ADB43A0072705F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				60E4C63527ADB43A0072705F /* modellingPendulums */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		60E4C63727ADB43A0072705F /* modellingPendulums */ = {
+			isa = PBXGroup;
+			children = (
+				60E4C64027ADB4C10072705F /* RungeKutta.swift */,
+				60E4C64327ADB4F70072705F /* Protocols.swift */,
+				60E4C64A27AECDF20072705F /* SimulationDataContainer.swift */,
+				60E4C63F27ADB4C10072705F /* DoubleVector.swift */,
+				60E4C63827ADB43A0072705F /* main.swift */,
+				60E4C64527ADB5380072705F /* Extensions to Basic Types.swift */,
+				60E4C64827ADB74F0072705F /* springPendulum.swift */,
+				60E4C64C27AEECAC0072705F /* DoublePendulum.swift */,
+				60E4C64E27B012150072705F /* DuffingOscillator.swift */,
+			);
+			path = modellingPendulums;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		60E4C63427ADB43A0072705F /* modellingPendulums */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60E4C63C27ADB43A0072705F /* Build configuration list for PBXNativeTarget "modellingPendulums" */;
+			buildPhases = (
+				60E4C63127ADB43A0072705F /* Sources */,
+				60E4C63227ADB43A0072705F /* Frameworks */,
+				60E4C63327ADB43A0072705F /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = modellingPendulums;
+			productName = modellingPendulums;
+			productReference = 60E4C63527ADB43A0072705F /* modellingPendulums */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		60E4C62D27ADB43A0072705F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					60E4C63427ADB43A0072705F = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+				};
+			};
+			buildConfigurationList = 60E4C63027ADB43A0072705F /* Build configuration list for PBXProject "modellingPendulums" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 60E4C62C27ADB43A0072705F;
+			productRefGroup = 60E4C63627ADB43A0072705F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				60E4C63427ADB43A0072705F /* modellingPendulums */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		60E4C63127ADB43A0072705F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				60E4C64F27B012150072705F /* DuffingOscillator.swift in Sources */,
+				60E4C64627ADB5380072705F /* Extensions to Basic Types.swift in Sources */,
+				60E4C64927ADB74F0072705F /* springPendulum.swift in Sources */,
+				60E4C64227ADB4C10072705F /* RungeKutta.swift in Sources */,
+				60E4C63927ADB43A0072705F /* main.swift in Sources */,
+				60E4C64D27AEECAC0072705F /* DoublePendulum.swift in Sources */,
+				60E4C64B27AECDF20072705F /* SimulationDataContainer.swift in Sources */,
+				60E4C64127ADB4C10072705F /* DoubleVector.swift in Sources */,
+				60E4C64427ADB4F70072705F /* Protocols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		60E4C63A27ADB43A0072705F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		60E4C63B27ADB43A0072705F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		60E4C63D27ADB43A0072705F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 82BRN88N8D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		60E4C63E27ADB43A0072705F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 82BRN88N8D;
+				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		60E4C63027ADB43A0072705F /* Build configuration list for PBXProject "modellingPendulums" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60E4C63A27ADB43A0072705F /* Debug */,
+				60E4C63B27ADB43A0072705F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60E4C63C27ADB43A0072705F /* Build configuration list for PBXNativeTarget "modellingPendulums" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				60E4C63D27ADB43A0072705F /* Debug */,
+				60E4C63E27ADB43A0072705F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 60E4C62D27ADB43A0072705F /* Project object */;
+}
