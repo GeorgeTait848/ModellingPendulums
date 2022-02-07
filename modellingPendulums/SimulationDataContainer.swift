@@ -38,10 +38,9 @@ public struct SimulationDataContainer: physicalSystemDataable {
     
     
 
-    public mutating func storeSystemDataAtIteration(iteration: Int, state:DoubleVector) {
+    public mutating func storeSystemDataAtIteration(state:DoubleVector) {
         
-        
-        data[iteration] = state
+        data.append(state)
         
         
     }

@@ -23,7 +23,7 @@ struct DuffingOscillator {
 
     var omega: Double
     
-    mutating func simulateSystem(numberOfIterations: Int, relativeTol: Double) -> SimulationDataContainer {
+    mutating func simulateSystem(timeOfSimulation: Double, relativeTol: Double) -> SimulationDataContainer {
         
         var currentStep = 0.01
         
@@ -34,23 +34,27 @@ struct DuffingOscillator {
         //this is so after the simulation, we can reassign the properties of the initial system back to itself so that we could repeat the simulation if we wanted.
         
         
-        var outputData = SimulationDataContainer(data: [DoubleVector](repeating: DoubleVector(elements: [Double](repeating: 0.0, count: 2)), count: numberOfIterations))
+        var outputData = SimulationDataContainer(data: [])
         
         
-        outputData.storeSystemDataAtIteration(iteration: 0, state: initialState)
+        outputData.storeSystemDataAtIteration(state: initialState)
+        
+        var currentTime = 0.0
         
         
-        for i in 1..<outputData.data.count {
+        while currentTime < timeOfSimulation {
             
             let currentState = getCurrentState()
             
             
-             currentStep = adaptStep(f: getCurrentDerivatives(currentState:t:), y: currentState, x: 0, h: currentStep, relativeTol: relativeTol)
+             currentStep = adaptStep(f: getCurrentDerivatives(currentState:currentTime:), y: currentState, x: currentTime, h: currentStep, relativeTol: relativeTol)
             
-             updateCurrentState(currentState: currentState, step: currentStep)
             
-            outputData.storeSystemDataAtIteration(iteration: i, state: currentState)
+            updateCurrentState(currentState: currentState, currentTime: currentTime, step: currentStep)
             
+            outputData.storeSystemDataAtIteration(state: currentState)
+            
+            currentTime += currentStep
         
             
         }
@@ -63,9 +67,11 @@ struct DuffingOscillator {
         
     }
     
-    mutating func updateCurrentState(currentState: DoubleVector, step: Double) {
+    
+    
+    mutating func updateCurrentState(currentState: DoubleVector, currentTime: Double, step: Double) {
           
-        let  newState = rungeKuttaFourthOrder(f: getCurrentDerivatives(currentState: t:), y: currentState, x: 0, h: step)
+        let  newState = rungeKuttaFourthOrder(f: getCurrentDerivatives(currentState: currentTime:), y: currentState, x: currentTime, h: step)
           
           
           reassignProperties(currentState: newState)
@@ -74,9 +80,9 @@ struct DuffingOscillator {
     
     
     
-    func getCurrentDerivatives(currentState: DoubleVector, t: Double) -> DoubleVector {
+    func getCurrentDerivatives(currentState: DoubleVector, currentTime: Double) -> DoubleVector {
         
-        return DoubleVector(elements: [d_dt_x(currentState: currentState, placeHolder: 0), d2_dt2_x(currentState: currentState, t: t)])
+        return DoubleVector(elements: [d_dt_x(currentState: currentState, placeHolder: 0), d2_dt2_x(currentState: currentState, t: currentTime)])
         
         
         
@@ -103,14 +109,21 @@ struct DuffingOscillator {
     }
     
     
+    
+    
     func d_dt_x (currentState: DoubleVector, placeHolder: Double) -> Double {
         
         return currentState.elements[1]
     }
     
+    
+    
+    
     func d2_dt2_x (currentState: DoubleVector, t : Double) -> Double {
         
-        let returnvalue = gamma * cos( omega * t ) - ( (delta * currentState.elements[1]) + (alpha * currentState.elements[0]) + (beta  * currentState.elements[0] * currentState.elements[0] * currentState.elements[0]))
+        let returnvalue = gamma * cos(omega * t) - (delta * currentState.elements[1] + alpha * currentState.elements[0] + beta * currentState.elements[0] * currentState.elements[0] * currentState.elements[0])
+        
+//        let returnvalue = gamma * cos(omega * t ) - ( (delta * outputs.elements[1]) + (alpha * outputs.elements[0]) + (beta  * outputs.elements[0] * outputs.elements[0] * outputs.elements[0]))
         
         return returnvalue
         

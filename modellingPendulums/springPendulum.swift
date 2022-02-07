@@ -25,7 +25,7 @@ public struct SpringPendulum {
     
     
     
-    mutating func simulateSystem(numberOfIterations: Int, relativeTol: Double) -> SimulationDataContainer {
+    mutating func simulateSystem(timeOfSimulation: Double, relativeTol: Double) -> SimulationDataContainer {
         
         var currentStep = 0.01
         
@@ -36,13 +36,14 @@ public struct SpringPendulum {
         //this is so after the simulation, we can reassign the properties of the initial system back to itself so that we could repeat the simulation if we wanted.
         
         
-        var outputData = SimulationDataContainer(data: [DoubleVector](repeating: DoubleVector(elements: [Double](repeating: 0.0, count: 4)), count: numberOfIterations))
+        var outputData = SimulationDataContainer(data: [])
         
         
-        outputData.storeSystemDataAtIteration(iteration: 0, state: initialState)
+        outputData.storeSystemDataAtIteration(state: initialState)
         
+        var totalTime = 0.0
         
-        for i in 1..<outputData.data.count {
+        while totalTime < timeOfSimulation {
             
             let currentState = getCurrentState()
             
@@ -51,7 +52,9 @@ public struct SpringPendulum {
             
              updateCurrentState(currentState: currentState, step: currentStep)
             
-            outputData.storeSystemDataAtIteration(iteration: i, state: currentState)
+            outputData.storeSystemDataAtIteration(state: currentState)
+            
+            totalTime += currentStep
             
         
             

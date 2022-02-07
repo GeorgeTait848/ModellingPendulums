@@ -106,7 +106,7 @@ public func adaptStep <T: AdaptiveSteppable> (f: (T, Double) -> T, y: T, x: Doub
     let dh = h * 2.0
     
     
-    let min_h = 0.0001
+    let min_h = 0.0005
     
 
     

@@ -86,7 +86,7 @@ public protocol physicalSystemDataable {
     func getCoordinateAtAllIterations(coordinateIndex: Int) -> [Double]
     
     
-    mutating func storeSystemDataAtIteration(iteration: Int, state: DoubleVector)
+    mutating func storeSystemDataAtIteration(state: DoubleVector)
     
     
 }
